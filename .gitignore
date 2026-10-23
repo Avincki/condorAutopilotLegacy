@@ -1,0 +1,16 @@
+# Build output / IDE
+bin/
+obj/
+.vs/
+packages/
+*.user
+*.suo
+
+# Old git history backup
+old.git/
+
+# Models and binaries
+*.onnx
+*.dll
+*.exe
+*.pdb

@@ -1,0 +1,31 @@
+Polaires pour XCSoar - Hangar Update 14
+
+Ces polaires ont été calculées à partir de données extraites des polaires de Condor.
+
+Pour installer les polaires, il suffit de copier les fichiers .xcp dans le dossier nommé XCSoarData\Polars
+
+Pour chaque planeur, il y a deux fichiers (à l'exception des monoplaces dont le ballast fixe est 0)
+- planeur.xcp     : masse minimale "sèche" (monoplaces: pas de ballast fixe, biplaces: un pilote)
+- planeur-FXB.xcp : masse maximale "sèche" (monoplaces: ballast fixe, biplaces: deux pilotes).
+
+Si l'on utilise ces fichiers, la charge alaire dans XCSoar est identique à celle de Condor pour une 
+même quantité d'eau emportée
+
+Des polaires au format Winpilot (.plr) sont aussi disponibles pour LK8000
+
+VALIDATION
+
+Les comparaison ont été faites aux réglages de McCready suivants :
+0 0,5 1,0 1,5 2,0 2,5 3,0 4,0 5,0
+
+L'accord entre les polaires calculées et celles de Condor est plutôt bon, sauf pour le Duo-Discus dont la polaire 
+chute au-dessus de 150 km/h (à masse minimale). 
+Il n'est pas possible d'approximer une telle courbe avec une parabole et, si l'on veut avoir un meilleur accord à 
+des vitesses plus élevées, cela conduira à surestimer les performances à plus faible vitesse, ce qui n'est à mon 
+avis pas souhaitable. La polaire calculée reste toutefois correcte jusqu'à un calage McCready de 5 à masse maximale.
+
+Pour chaque planeur, la comparaison entre les données Condor et la polaire calculée (à la masse maximale) est 
+disponible dans le fichier NOM.png.
+ 
+Un résumé des erreurs relatives quadratiques moyennes pour Vz [en fonction de la plage de MC] se trouve dans le 
+fichier FitErrors.txt
